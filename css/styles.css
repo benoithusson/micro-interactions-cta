@@ -1,10 +1,8 @@
 * {
   margin: 0;
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  --color-primary: #25252a;
-  --color-secondary: rgb(255, 0, 68);
+  --color-primary: rgb(255, 255, 255);
+  --color-secondary: rgb(6, 50, 116);
   text-decoration: none;
-  color: white;
 }
 
 .header {
@@ -34,55 +32,62 @@ ul {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: 50vh;
+  min-height: 300px;
   background-color: var(--color-primary);
 }
 
 .bloc {
+  font-family: 'Montserrat', 'Arial', sans-serif;
   position: relative;
   display: flex;
   justify-content: center;
   gap: 0 50px;
   align-items: center;
   width: 100%;
-  min-height: 50vh;
+  min-height: 300px;
   background-color: var(--color-primary);
-}
-
-.bloc:nth-child(odd),
-.bloc--column:nth-child(odd) {
-  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-secondary);
 }
 
 .bloc__btn {
   margin: 0 20px;
-  width: 200px;
-  height: 80px;
+  width: 150px;
+  height: 60px;
   border-radius: 5px;
   border: none;
   font-size: 1rem;
   border: 1px solid var(--color-secondary);
-  color: white;
   cursor: pointer;
   transition: all 0.3s ease-out;
   background-color: transparent;
 }
 
 /* Animation 1 */
+.bloc__btn--first-animation {
+  color: var(--color-secondary);
+}
+
 .bloc__btn--first-animation:hover {
   box-shadow: inset 200px 0 0 0 var(--color-secondary);
+  color: var(--color-primary);
 }
 
 /* Animation 2 */
+.bloc__btn--second-animation {
+  color: var(--color-secondary);
+}
+
 .bloc__btn--second-animation:hover {
   box-shadow: 10px 10px 0 0 var(--color-secondary);
 }
 
 /* Animation 3 */
 .bloc__btn--third-animation {
+  color: var(--color-primary);
   outline: 2px solid var(--color-primary);
   outline-offset: 0;
-  background-color: rgb(186, 3, 51);
+  background-color: var(--color-secondary);
 }
 
 .bloc__btn--third-animation:hover {
@@ -91,13 +96,15 @@ ul {
   outline: 2px solid var(--color-primary);
   outline-offset: -8px;
   background-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 /* Animation 4 */
 .bloc__btn--fourth-animation {
   position: relative;
   font-size: 1rem;
-  padding: 20px;
+  padding: 10px;
+  color: var(--color-secondary);
 }
 
 .bloc__btn--fourth-animation::before,
@@ -112,7 +119,7 @@ ul {
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.3s ease;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 .bloc__btn--fourth-animation::after {
@@ -132,7 +139,8 @@ ul {
 /* Animation 5 */
 .link-container {
   position: relative;
-  padding: 30px 60px;
+  padding: 20px 40px;
+  color: var(--color-secondary);
 }
 
 .link-container:hover {
@@ -148,7 +156,7 @@ ul {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #25252a;
+  background-color: var(--color-secondary);
   transition: all 0.2s ease-in;
 }
 
@@ -157,7 +165,7 @@ ul {
   right: 0;
   width: 2px;
   height: 0;
-  background-color: #25252a;
+  background-color: var(--color-secondary);
   transition: all 0.2s ease-in;
 }
 
@@ -166,7 +174,7 @@ ul {
   right: 0;
   width: 0;
   height: 2px;
-  background-color: #25252a;
+  background-color: var(--color-secondary);
   transition: all 0.2s ease-in;
 }
 
@@ -175,7 +183,7 @@ ul {
   left: 0;
   width: 2px;
   height: 0;
-  background-color: #25252a;
+  background-color: var(--color-secondary);
   transform-origin: center;
   transition: all 0.2s ease-in;
 }
@@ -198,20 +206,21 @@ ul {
 
 /* Animation 6 */
 .bloc__btn--sixth-animation {
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-secondary);
   border-radius: 0;
   transition: all 0.2s ease-in;
+  color: var(--color-secondary);
 }
 
 .bloc__btn--sixth-animation:hover {
   border-radius: 30px;
-  box-shadow: 5px 5px 2px 0 var(--color-primary);
+  box-shadow: 5px 5px 2px 0 var(--color-secondary);
 }
 
 .bloc__btn--sixth-animation:active,
 .bloc__btn--sixth-animation:focus {
   color: var(--color-primary);
-  border: 3px solid var(--color-primary);
+  border: 3px solid var(--color-secondary);
 }
 
 /* Animation 7 */
@@ -219,99 +228,19 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--color-secondary);
   border-radius: 10px;
-  background: linear-gradient(var(--color-secondary), var(--color-primary));
+  background-color: var(--color-secondary);
   transition: all 0.4s ease-in-out;
+}
+
+.fa-brands {
+  color: white;
 }
 
 .bloc__social-icon:hover {
   transform: translateY(-10px);
   border-radius: 50%;
-}
-
-/* Animation 8 - card shoes */
-.bloc--shoes {
-  border-top: 1px solid var(--color-secondary);
-  background-color: var(--color-primary);
-  display: flex;
-  justify-content: center;
-  padding: 30px 0;
-  gap: 30px;
-}
-
-.bloc__card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 400px;
-  min-height: 500px;
-  border-radius: 10px;
-  background-color: rgba(207, 207, 207, 0.432);
-}
-
-.card__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-
-.card__image img {
-  transform-origin: bottom left;
-  transition: all 0.5s ease;
-}
-
-.card__image h4 {
-  padding: 20px 0;
-  font-size: 20px;
-  font-weight: 100;
-}
-
-.bloc__card:hover .card__image {
-  transform: translateY(-30px);
-}
-
-.bloc__card:hover img {
-  transform-origin: bottom left;
-  transform: translateY(-10px) rotate(-15deg) scale(1.3);
-}
-
-.card__text {
-  position: absolute;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  bottom: -20px;
-  left: 0;
-  padding: 40px 0;
-  width: 100%;
-  height: auto;
-  display: flex;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-
-.card__text p {
-  margin-bottom: 20px;
-  font-weight: 100;
-}
-
-.card__text button {
-  padding: 10px 40px;
-  border: none;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 100;
-  color: black;
-}
-
-.bloc__card:hover .card__text {
-  bottom: 5px;
-  opacity: 1;
 }
