@@ -15,6 +15,7 @@
   min-height: 450px;
   border: 1px solid rgba(150, 150, 150, 0.521);
   color: black;
+  padding: 20px;
   font-family: 'Rock Salt', cursive;
 }
 
@@ -61,7 +62,7 @@
 
 .bloc__card:hover img {
   transform-origin: bottom left;
-  transform: translateY(-5px) rotate(-5deg) scale(1.1);
+  transform: translateY(-5px) rotate(-5deg) scale(1.175);
 }
 
 .card__text {
