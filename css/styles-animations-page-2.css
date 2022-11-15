@@ -1,109 +1,37 @@
-/* Animation 8 - card shoes */
-.bloc--shoes {
-  display: flex;
-  justify-content: center;
-  padding: 30px 0;
-  gap: 30px;
-}
-
-.card {
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Cacher la partie de l'image qui dépasse du cadre si elle est trop grande */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 250px;
-  min-height: 450px;
-  border: 1px solid rgba(150, 150, 150, 0.521);
-  color: black;
-  padding: 20px;
-  font-family: 'Rock Salt', cursive;
 }
 
-.card:hover,
-.card__text button:hover {
-  cursor: pointer;
+#section-with-paragraphs {
+  height: 50vh;
 }
 
-.stock-available {
+section img {
+  /*
+    Toutes les images sont enlevées du flux normal de la page
+    Elles vont se superposer les unes aux autres
+  */
   position: absolute;
   top: 0;
-  background-color: rgba(214, 18, 18, 0.329);
   left: 0;
-  padding: 10px;
-  font-size: 10px;
-  opacity: 0;
-  transform: scale(0);
-  transform-origin: left top;
-  transition: all 0.4s ease;
+  width: 100%;
+  height: 100%;
 }
 
-.bloc__card:hover .stock-available {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.card__image {
+#text {
+  position: relative;
+  font-size: 20vh;
+  color: white;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-
-.card__image img {
-  transform-origin: bottom left;
-  transition: all 0.5s ease;
-}
-
-.bloc__card:hover .card__image {
-  transform: translateY(-30px);
-}
-
-.bloc__card:hover img {
-  transform-origin: bottom left;
-  transform: translateY(-5px) rotate(-5deg) scale(1.175);
-}
-
-.card__text {
-  position: absolute;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  bottom: -20px;
-  left: 0;
-  padding: 40px 0;
-  width: 100%;
-  height: auto;
-  display: flex;
-  opacity: 0;
-  transition: all 0.5s ease;
-  font-size: 12px;
-  gap: 25px;
-}
-
-.shoes-sizes span {
-  background-color: rgba(175, 175, 175, 0.384);
-  padding: 12px;
-  border-radius: 10px;
-}
-
-.btn-container button {
-  padding: 10px 40px;
-  border: none;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 100;
-  color: white;
-  background-color: rgb(31, 100, 204);
-}
-
-.bloc__card:hover .card__text {
-  bottom: 5px;
-  opacity: 1;
-}
-
-.name-product h4 {
-  padding: 15px 0;
-  font-weight: 100;
 }
